@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <title>登录</title>
+</head>
+<body>
+
+<h1>登录到系统</h1>
+<hr>
+<form method="post" action="login">
+<!--    这里使用"/login"会导致服务器直接去找根目录下的login,404-->
+<!--    这里应该使用"login"-->
+    <div>
+        <label for="input-username"></label>
+        <input type="text" id="input-username" placeholder="用户名" name="username">
+    </div>
+    <div>
+        <label for="input-password"></label>
+        <input type="password" id="input-password" placeholder="密码" name="password">
+    </div>
+    <div>
+        <button>登录</button>
+    </div>
+</form>
+<hr>
+    <a href="file" download="all-application.png">点我下载高清资源</a>
+<hr>
+<form method="post" action="file" enctype="multipart/form-data">
+    <div>
+        <input type="file" name="test-file">
+    </div>
+    <div>
+        <button>上传文件</button>
+    </div>
+</form>
+</body>
+</html>
