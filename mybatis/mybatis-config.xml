@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="logImpl" value="JDK_LOGGING"/>
+    </settings>
+    <typeAliases>
+        <package name="com.test.entity"/>
+<!--        mybatis扫描包里的类，别名为类名的小写 resultType不需要写完整的包.类名，直接用别名了-->
+    </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/learn"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <package name="com.test.mapper"/>
+<!--        <mapper class="com.test.mapper.TestMapper"/>-->
+<!--        url是xml文件在外部-->
+<!--        resource是xml文件在内部-->
+    </mappers>
+
+</configuration>
